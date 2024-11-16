@@ -1,5 +1,6 @@
-import { Column, Entity } from "typeorm";
-import { Base } from "./Base";
+import { Column, Entity, OneToMany } from "typeorm";
+import { Base } from "../Base";
+import { SocialAccount } from "./SocialAccount";
 
 export enum GenderTypes {
     MALE = 'M',
@@ -35,5 +36,12 @@ export class User extends Base {
 
     @Column({ nullable: true, default: GenderTypes.NOT_ASIGNED })
     gender?: GenderTypes
+
+    //#region Relations
+    @OneToMany(() => SocialAccount, social_account => social_account.user, {
+        onDelete: 'CASCADE',
+        nullable: true
+    })
+    socialAccounts?: SocialAccount
 
 }

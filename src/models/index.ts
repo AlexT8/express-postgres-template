@@ -1,4 +1,4 @@
-import { User } from "./User"
+import { User } from "./app/User"
 
 export const getTables = () => {
     const app: any = [User]
