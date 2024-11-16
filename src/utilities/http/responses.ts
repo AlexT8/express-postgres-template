@@ -6,3 +6,10 @@ export const getResponse = (res: Response, message: string, data?: any) => {
         ...data
     })
 }
+
+export const createResponse = (res: Response, message: string, data?: any) => {
+    return res.status(201).json({
+        message,
+        ...data
+    })
+}
