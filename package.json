@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc && tsc-alias",
+    "format": "prettier --write .",
     "dev:tsc": "tsc --watch",
     "dev:alias": "tsc-alias --watch",
     "dev:node": "nodemon dist/index.js",
@@ -45,6 +46,7 @@
     "@types/passport-twitter": "^1.0.40",
     "concurrently": "^9.1.0",
     "nodemon": "^3.1.7",
+    "prettier": "^3.3.3",
     "tsc-alias": "^1.8.10",
     "typescript": "^5.6.3"
   },
